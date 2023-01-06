@@ -1,10 +1,12 @@
+'use client'
+
 import { type NextPage } from "next";
-import MovesetPane from "../components/MovesetPane";
+import MovesetPane from "./MovesetPane";
 import { useState } from "react";
-import NavPane from "../components/NavPane";
+import NavPane from "./NavPane";
 import dynamic from "next/dynamic";
 
-const OverlayComponent = dynamic(() => import("../components/OverlayComponent"));
+const OverlayComponent = dynamic(() => import("./OverlayComponent"));
 
 const Home: NextPage = () => {
   const [overlayIsOpen, setOverlayIsOpen] = useState(false);

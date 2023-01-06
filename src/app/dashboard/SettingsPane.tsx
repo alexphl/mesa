@@ -1,6 +1,6 @@
-//import dynamic from "next/dynamic";
 import AuthShowcase from "./AuthShowcase";
-import { trpc } from "../utils/trpc";
+//import dynamic from "next/dynamic";
+//import { trpc } from "../../utils/trpc";
 
 //const AuthShowcase = dynamic(() => import("./AuthShowcase"));
 //const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
