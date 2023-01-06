@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Cog6ToothIcon,
   UserCircleIcon,
@@ -6,11 +8,20 @@ import {
   ClipboardDocumentListIcon,
 } from "@heroicons/react/24/solid";
 
-const NavPane = (props: { OverlayController: any }) => {
-  const [overlayIsOpen, setOverlayIsOpen] = props.OverlayController;
+import dynamic from "next/dynamic";
+import { useState } from 'react';
+
+const OverlayComponent = dynamic(() => import("./OverlayComponent"));
+
+
+const NavPane = () => {
+  const [overlayIsOpen, setOverlayIsOpen] = useState(false);
 
   return (
-    <nav className="fixed grid h-screen grid-cols-1 grid-rows-[50px_5fr_50px] gap-8 p-6 text-neutral-300 transition-all lg:p-10">
+    <>
+    <OverlayComponent controller={[overlayIsOpen, setOverlayIsOpen]}/>
+
+    <nav className="fixed hidden sm:grid h-screen grid-cols-1 grid-rows-[50px_5fr_50px] gap-8 p-6 text-neutral-300 transition-all lg:p-10">
       <div className="aspect-square cursor-pointer rounded-3xl bg-black/[0.3] p-3 shadow-lg transition-all hover:scale-105 hover:text-white">
         <UserCircleIcon />
       </div>
@@ -36,6 +47,7 @@ const NavPane = (props: { OverlayController: any }) => {
         <Cog6ToothIcon />
       </div>
     </nav>
+    </>
   );
 };
 
