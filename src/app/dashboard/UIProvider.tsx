@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/24/solid";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { useState } from 'react';
 
 const OverlayComponent = dynamic(() => import("./OverlayComponent"));
@@ -27,17 +28,17 @@ const NavPane = () => {
       </div>
 
       <div className="flex flex-col place-content-evenly self-end rounded-3xl bg-black/[0.3] py-2 shadow-lg transition-all hover:scale-105">
-        <div className="cursor-pointer rounded-3xl p-3 transition-all hover:scale-105 hover:text-white">
+        <Link href="/dashboard" className="cursor-pointer rounded-3xl p-3 transition-all hover:scale-105 hover:text-white">
           <ClipboardDocumentListIcon />
-        </div>
+        </Link>
 
-        <div className="cursor-pointer rounded-3xl p-3 transition-all hover:scale-105 hover:text-white">
+        <Link href="/dashboard/workout" className="cursor-pointer rounded-3xl p-3 transition-all hover:scale-105 hover:text-white">
           <PlusCircleIcon />
-        </div>
+        </Link>
 
-        <div className="cursor-pointer rounded-3xl p-3 transition-all hover:scale-105 hover:text-white">
+        <Link href="/dashboard" className="cursor-pointer rounded-3xl p-3 transition-all hover:scale-105 hover:text-white">
           <ChartBarSquareIcon />
-        </div>
+        </Link>
       </div>
 
       <div
