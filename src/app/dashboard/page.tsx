@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { type NextPage } from "next";
 import MovesetPane from "./MovesetPane";
@@ -13,14 +13,14 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <OverlayComponent OverlayController={[overlayIsOpen, setOverlayIsOpen]}/>
+      <OverlayComponent OverlayController={[overlayIsOpen, setOverlayIsOpen]} />
 
-      <div className="sm:grid grid-cols-[105px_5fr] lg:grid-cols-[140px_5fr] justify-evenly">
+      <div className="grid-cols-[105px_5fr] justify-evenly sm:grid lg:grid-cols-[140px_5fr]">
         <div className="hidden sm:block">
-          <NavPane OverlayController={[overlayIsOpen, setOverlayIsOpen]}/>
+          <NavPane OverlayController={[overlayIsOpen, setOverlayIsOpen]} />
         </div>
 
-        <div className="my-10 sm:pr-10 lg:pr-14 grid gap-6">
+        <div className="my-10 grid gap-6 sm:pr-10 lg:pr-14">
           {[...Array(5)].map((_x, i) => (
             <MovesetPane pos={i} key={i} />
           ))}

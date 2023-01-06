@@ -1,15 +1,19 @@
-import AuthShowcase from "./AuthShowcase";
-//import dynamic from "next/dynamic";
+"use client";
+
+import { SessionProvider } from "next-auth/react";
+import dynamic from "next/dynamic";
 //import { trpc } from "../../utils/trpc";
 
-//const AuthShowcase = dynamic(() => import("./AuthShowcase"));
+const _AuthShowcase = dynamic(() => import("./AuthShowcase"));
 //const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
 
 const SettingsPane = () => {
   return (
-    <div className="bg-zinc-900 w-full h-full md:rounded-2xl">
-      <AuthShowcase />
-    </div>
+    <SessionProvider>
+      <div className="h-full w-full bg-zinc-900 md:rounded-2xl">
+        <button />
+      </div>
+    </SessionProvider>
   );
 };
 
