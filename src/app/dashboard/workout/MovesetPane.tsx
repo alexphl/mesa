@@ -2,7 +2,7 @@ const MovesetPane = (props: {pos: number}) => {
 	const stackPos = props.pos;
 
 	return (
-		<div className="containter h-fit w-full shadow-xl sm:rounded-2xl bg-zinc-900">
+		<div className="containter h-fit w-full shadow-xl sm:rounded-2xl bg-neutral-900">
 				<div className="z-1 sticky top-0 grid h-4 grid-cols-[20%_1fr_20%] grid-rows-1 bg-white/[0.1] px-3 py-6 backdrop-blur-2xl hover:bg-zinc-900 hover:backdrop-filter-none sm:rounded-t-2xl">
 					{/*              <ChartModeListbox
                 selected={Chart.mode}

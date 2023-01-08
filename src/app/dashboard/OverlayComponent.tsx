@@ -3,7 +3,7 @@ import FocusTrap from "focus-trap-react";
 import { RemoveScroll } from "react-remove-scroll";
 
 const OverlayComponent = (props: {controller: any}) => {
-  let [isOpen, setIsOpen] = props.controller;
+  const [isOpen, setIsOpen] = props.controller;
 
   return (
     <>
@@ -12,7 +12,7 @@ const OverlayComponent = (props: {controller: any}) => {
           <FocusTrap>
             <div className="fixed z-50 flex h-screen w-screen cursor-pointer place-content-center place-items-center">
               <div
-                className="fixed h-screen w-screen bg-zinc-800/[0.7] backdrop-blur-sm"
+                className="fixed h-screen w-screen bg-stone-200/[0.08] backdrop-blur-sm"
                 onClick={() => setIsOpen(false)}
               />
 
