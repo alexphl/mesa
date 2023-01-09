@@ -16,5 +16,10 @@ const config = {
   experimental: {
     appDir: true,
   },
+  modularizeImports: {
+    '@heroicons/react/24/solid': {
+      transform: '@heroicons/react/24/solid/{{member}}',
+    },
+  },
 };
 export default config;
